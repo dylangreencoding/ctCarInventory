@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 1.2rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  font-family: monospace;
+}
+
+li {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav-items li {
+  margin-right: 1.2rem;
+}
+
+.nav-items li:last-child {
+  margin-right: 0;
+}
+
+#pass-field, #email-field {
+  border: none;
+}
+
+#submit_button {
+  background: none;
+  border: none;
+  font-size: inherit;
+  padding: 0.8rem 1.2rem;
+  color: white;
+  background-color: purple;
+  transition: all 0.3s;
+}
+
+#submit_button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: plum;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}

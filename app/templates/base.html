@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="../static/css/main.css">
+<title>Virtual Garage</title>
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <div class="flex">
+            <a href="{{ url_for('site.home') }}">VirtualGarage</a>
+            <div>
+                <ul class="flex nav-items">
+                    <li>
+                        <a href="{{ url_for('site.home') }}" class="nav-link">Home</a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                    <li>
+                        <a href="{{ url_for('site.profile') }}" class="nav-link">Profile</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('auth.logout') }}" class="nav-link">Logout</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{{ url_for('auth.signin') }}" class="nav-link">EnterGarage</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('auth.signup') }}" class="nav-link">CreateGarage</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>
