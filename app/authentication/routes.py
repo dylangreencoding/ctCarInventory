@@ -28,7 +28,7 @@ def signup():
             return redirect(url_for('site.home'))
     except:
         raise Exception('Invalid form data: Please check your form')
-    return render_template('sign_up.html', form=form)
+    return render_template('signup.html', form=form)
 
 
 @auth.route('/signin', methods=['GET', 'POST'])
@@ -53,7 +53,7 @@ def signin():
                 return redirect(url_for('auth.signin'))
     except:
         raise Exception('Invalid Form Data: Please Check your Form')
-    return render_template('sign_in.html', form=form)
+    return render_template('signin.html', form=form)
 
 
 @auth.route('/logout')
